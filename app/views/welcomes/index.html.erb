@@ -1,0 +1,179 @@
+<div class="navbar navbar-custom navbar-inverse navbar-static-top" id="nav">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+      <div class="collapse navbar-collapse">
+        <ul class="nav navbar-nav nav-justified">
+          <li><a href="#section1">HOME</a></li>
+          <li><a href="#section2">IDEA</a></li>
+          <li><a href="#section3">H.I.W</a></li>
+          <li><a href="#section4">LATEST</a></li>
+          <li><a href="#section5">PARTICIPATE</a></li>
+          <li><a href="#section6">CONTACT</a></li>
+        </ul>
+      </div><!--/.nav-collapse -->
+    </div><!--/.container -->
+</div><!--/.navbar -->
+<!-- Begin page content -->
+<!-- <div class="divider"></div> -->
+  
+<section>
+  <div class="divider" id="section1"></div>
+  <div class="android_row">
+     <%= image_tag('images1/logo1.jpg')  %>
+  </div><!--/container-->
+</section>
+  
+
+<section>
+  <div class="divider" id="section2"></div>
+  <div class="idea">
+    <h1>IDEA</h1>
+    <p>
+      RAP BATTLES on Twitter! </br> Come  compete against friends and strangers </br> to see who can come up with the best 140 character bar!
+    </p>
+    </br>
+    <p>
+      Connect with other rap lovers and test your command of the English language!
+    </p>
+  </div>
+</section>
+
+<section>
+  <div class="divider" id="section3"></div> 
+  <div class="how_it_works">
+    <h1>HOW IT WORKS</h1>
+    
+    <div class="col-sm-3 col-xs-6">
+      Challenge and Accept
+      </br>
+      <%= image_tag('images1/lolfinal.png') %>
+      </br>
+      <%= image_tag('images1/challenge1.jpg') %>
+      </br>
+      </br>
+      <%= image_tag('images1/challenge2.jpg') %>
+
+    </div>
+
+    <div class="col-sm-3 col-xs-6">
+      Submission
+      </br>
+      </br>
+      <%= image_tag('images1/envelope.png') %>
+      </br>
+      <p>
+        DM 140 character entry to @TweetABar within X hours.
+      </p>
+    </div>
+
+    <div class="col-sm-3 col-xs-6">
+      Voting
+      </br>
+      </br>
+      <%= image_tag('images1/voteboxfinal.png') %>
+      </br>
+      <p>
+        Pick A or B! Tweet the # provided in entry display tweet to vote!
+      </p>
+    </div>
+
+    <div class="col-sm-3 col-xs-6">
+      Announcement
+      </br>
+      </br>
+      <%= image_tag('images1/trophy.png') %>
+      </br>
+      <p>
+        After the voting time is up, the winner will be tweeted!
+      </p>
+    </div>
+  </div>
+</section>
+
+
+ <section> 
+  <div class="divider" id="section4"></div>
+  <div class="latest">
+    <p>
+      LATEST SECTION COMING SOON!
+    </p>
+
+  </div>
+</section>
+
+<section>
+  <div class="divider" id="section5"></div>
+  <div class="participate">
+      
+    <p>
+    </p> 
+    <%= form_tag('/welcomes/subscribe', method: "post", id: "subscribe", remote: "true") do -%>
+      Before TweetABar goes completely public, it needs to be extensively tested. Want to help out?<br> (Click Sign me up only once!)<br>
+      (Check your email!)
+      <%= email_field(:email, :address, {id: "email", placeholder: "Email Address"}) %>
+      <%= submit_tag("Sign me up!") %>
+    <% end %>
+    </br>
+
+  </div>
+</section>
+
+<section>
+  <div class="divider" id="section6"></div>  
+  <div class="contact_us">
+    <%= form_for @welcomes do |f| %>
+    <h1>Contact Us!</h1>
+    <%= f.label :name %>
+    <br>
+    <%= f.text_field :name %>
+    <br>
+    <%= f.label :content %>
+    <br>
+    Please include your email somewhere in your message.
+    <br>
+    <%= f.text_area :content %>
+    <br>
+    <br>
+    <%= f.submit "Send", class: 'button' %>
+    <br>
+    <br>
+    <!-- <form>
+      Name:
+      <br>
+      <input type="text" name="nameInput">
+      <br>
+      Email: 
+      <br>
+      <input type="text" name="emailInput">
+      <br>
+      Message:
+      <br>
+       <textarea rows="5" cols="20"></textarea>
+
+      <br>
+      <button onClick="contactUs()" class="btn btn-default">Contact Us</button>
+      <br>
+    
+    </form> -->
+    <% end %>
+  </div>
+</section>
+
+
+<div id="footer">
+  <div class="container">
+    <p class="text-muted">Copyright ©2015 RidSolutions, Inc.</p>
+  </div>
+</div>
+
+<ul class="nav pull-right scroll-top">
+  <li><a href="#" title="Scroll to top"><i class="glyphicon glyphicon-chevron-up"></i></a></li>
+</ul>
+
+</div>
