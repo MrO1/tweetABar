@@ -116,7 +116,8 @@
     <%= form_tag('/welcomes/subscribe', method: "post", id: "subscribe", remote: "true") do -%>
       Before TweetABar goes completely public, it needs to be extensively tested. Want to help out?<br> (Click Sign me up only once!)<br>
       (Check your email!)
-      <%= email_field(:email, :address, {id: "email", placeholder: "Email Address"}) %>
+      <%= email_field(:email, :address, {id: "email", placeholder: "Email Address"}) %> 
+      <br>
       <%= submit_tag("Sign me up!") %>
     <% end %>
     </br>
